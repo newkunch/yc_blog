@@ -26,12 +26,12 @@ public interface ArticleMapper {
 	 * ？？？？ ==>子查询的  命名空间 namespace'='' +查询id
 	 * @return
 	 */
-//	@Results({
-//		@Results(id="rmAct",value= {
-//				
-//	
-//				@Result(column = "categoryid",property = "category",
-//								one = @One(select = "com.yc.C81lkblog.dao.CategoryMapper.selectById"))  })
+	@Results({
+	
+				
+	
+				@Result(column = "categoryid",property = "category",
+								one = @One(select = "com.yc.C81lkblog.dao.CategoryMapper.selectById"))  })
 	public List<Article> selectNewArticle();
 @Select("select *from article where id = #{id}")
 //引用关联查询的配置
